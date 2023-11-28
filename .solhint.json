@@ -1,0 +1,16 @@
+{
+  "extends": "solhint:recommended",
+  "rules": {
+    "custom-errors": "warn",
+    "no-unused-import": "warn",
+    "no-empty-blocks": "warn",
+    "no-unused-vars": "warn",
+    "one-contract-per-file": "error",
+    "payable-fallback": "warn",
+    "quotes": ["error","single"],
+    "const-name-snakecase": "warn",
+    "func-visibility": ["warn", { "ignoreConstructors": true }],
+    "contract-name-camelcase": "warn",
+    "event-name-camelcase": "warn"
+  }
+}

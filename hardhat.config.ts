@@ -4,6 +4,9 @@ import "dotenv/config";
 import "tsconfig-paths/register";
 import "@nomicfoundation/hardhat-ethers";
 import "hardhat-deploy";
+import '@typechain/hardhat'
+import '@nomicfoundation/hardhat-ethers'
+import '@nomicfoundation/hardhat-chai-matchers'
 
 import { env } from "env";
 
@@ -24,7 +27,11 @@ if (!env.COINMARKETCAP_API_KEY) {
 }
 
 const config: HardhatUserConfig = {
-  solidity: "0.8.22",
+  solidity: { compilers: [{ version: "0.8.22" }, {version:"0.8.0" }]},
+  // paths: {
+  //   sources: "./contracts",
+  //   tests: "./contracts/test",
+  // },
   defaultNetwork: "hardhat",
   networks: {
     hardhat: {

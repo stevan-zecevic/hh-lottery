@@ -20,7 +20,10 @@
     "paths": {
       "contracts": ["./contracts/*"],
       "test": ["./test/*"],
-      "env": ["./env.ts"]
+      "env": ["./env.ts"],
+      "mock-utils": ["./mock-utils.ts"]
     },
-  }
+  },
+  "include": ["./deploy", "./test", "./typechain-types"],
+  "files": ["./hardhat.config.ts"]
 }
